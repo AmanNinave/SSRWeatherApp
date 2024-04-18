@@ -7,6 +7,6 @@
     "outDir": "./dist" 
   },
   "include": [
-    "public/index.ts" 
+    "src/index.ts" 
   ]
 }
