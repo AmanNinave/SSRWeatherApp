@@ -39,11 +39,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var axios_1 = require("axios");
 var dotenv = require("dotenv");
+var path = require("path");
 var app = express();
 dotenv.config();
 var port = process.env.PORT || 3000;
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, '../views'));
 app.use(express.urlencoded({ extended: true }));
 app.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var location_1, weatherData, error_1;
